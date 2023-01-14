@@ -17,7 +17,7 @@ printf "\nChecking for duplicate songs. This might take a while if the playlist 
 # store all songs in songs.txt file		
 youtube-dl --get-filename -o "%(playlist_title)s - %(title)s - %(id)s" "$playlist" > songs.txt
 
-echo "All songs checked! If any dupliates exist, they will be stored in 'duplicates.txt'."
+echo "All songs checked! If any dupliates exist, they will be stored inside 'duplicates.txt'."
 
 # copy all the duplicates to a duplicates file
 sort songs.txt | uniq -d > duplicates.txt
