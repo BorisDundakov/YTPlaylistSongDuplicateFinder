@@ -52,4 +52,9 @@ jobs:
 
           git add .
           git diff-index --quiet HEAD || git commit -m "Updating duplicates.txt"
-          git push origin master
+      
+      - name: push chabges
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
