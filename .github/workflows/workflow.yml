@@ -12,7 +12,7 @@ on:
     # runs the cron job at 00:00 every day
     #- cron: '0 0 * * *'
 
-  #each job needs to start by checking out current repo first??!!
+  #N.B!! each job needs to start by checking out current repo first??!!
 jobs:
   
   setup:
@@ -42,8 +42,8 @@ jobs:
           git config --global user.name "BorisDundakov"
           pwd
           echo ls
-  #        ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
-  #        ls -la
-  #        ./script.bash
+          ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
+          ls -la
+          ./script.bash
 
   
