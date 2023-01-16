@@ -27,7 +27,7 @@ jobs:
 
       - name: install youtube-dl
         run:  pip install --upgrade youtube-dl
-        
+
 
   run-bash-file:
     needs: setup
@@ -49,6 +49,9 @@ jobs:
       
       - name: save Results
         run: |
+          git config --global user.email "boris.stefan.de@gmail.com"
+          git config --global user.name "BorisDundakov"
+
           git add .
           git diff-index --quiet HEAD || git commit -m "Updating duplicates.txt"
           git push origin main
