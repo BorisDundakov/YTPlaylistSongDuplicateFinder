@@ -43,7 +43,4 @@ jobs:
           pwd
           echo ls
           ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
-          ls -la
-          ./script.bash
-
   
