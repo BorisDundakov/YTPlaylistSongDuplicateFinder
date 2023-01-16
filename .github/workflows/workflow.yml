@@ -13,15 +13,22 @@ on:
     #- cron: '0 0 * * *'
 
   #N.B!! each job needs to start by checking out current repo first??!!
+
 jobs:
   
   setup:
     runs-on: ubuntu-latest
     
+    #TODO: Install youtube-dl first
+
     steps:
       - name: checkout current repo
         uses: actions/checkout@v3
-  
+
+      - name: install youtube-dl
+        run:  pip install --upgrade youtube-dl
+        
+
   run-bash-file:
     needs: setup
     runs-on: ubuntu-latest
@@ -39,9 +46,9 @@ jobs:
       - name: run bash-file from command line
         run: |
           ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMFH3cIWKXgg9DPOaTyqMNAU
-
-#          git config --global user.email "boris.stefan.de@gmail.com"
-#          git config --global user.name "BorisDundakov"
-#          pwd
-#          ls
-
+      
+      - name: save Results
+        run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Updating duplicates.txt"
+          git push origin main
