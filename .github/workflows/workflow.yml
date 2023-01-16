@@ -1,0 +1,33 @@
+# a workflow that will loop over the specified playlist
+# once every 24 hours. Results to be displayed as a push 
+# notification or something
+
+
+name: check for duplicates
+
+on:
+  push:
+    
+  #schedule:
+    # runs the cron job at 00:00 every day
+    #- cron: '0 0 * * *'
+
+
+jobs:
+  
+  setup:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout current repo
+        uses: actions/checkout@v3
+  
+  run-bash-file:
+    needs: setup
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run bash-file from command line
+        run: ./script.bash
+
+  
