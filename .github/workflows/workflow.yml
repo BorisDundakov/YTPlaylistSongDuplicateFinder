@@ -12,7 +12,7 @@ on:
     # runs the cron job at 00:00 every day
     #- cron: '0 0 * * *'
 
-
+  #each job needs to start by checking out current repo first??!!
 jobs:
   
   setup:
@@ -27,12 +27,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout current repo
+        uses: actions/checkout@v3
+
+      - name: print current working directory
+        run: pwd
+      
+      - name: list working directory
+        run: ls
+
       - name: run bash-file from command line
         run: |
           git config --global user.email "boris.stefan.de@gmail.com"
           git config --global user.name "BorisDundakov"
           pwd
-          ls
+          echo ls
   #        ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
   #        ls -la
   #        ./script.bash
