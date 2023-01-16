@@ -42,5 +42,7 @@ jobs:
           git config --global user.name "BorisDundakov"
           pwd
           ls
-      #    ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
+          ./script.bash
+      #   ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
+      #   ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
   
