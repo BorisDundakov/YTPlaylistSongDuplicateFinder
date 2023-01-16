@@ -38,11 +38,10 @@ jobs:
 
       - name: run bash-file from command line
         run: |
-          git config --global user.email "boris.stefan.de@gmail.com"
-          git config --global user.name "BorisDundakov"
-          pwd
-          ls
-          ./script.bash
-      #   ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
-      #   ./home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/script.bash
-  
+          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMFH3cIWKXgg9DPOaTyqMNAU
+
+#          git config --global user.email "boris.stefan.de@gmail.com"
+#          git config --global user.name "BorisDundakov"
+#          pwd
+#          ls
+
