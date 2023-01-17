@@ -3,9 +3,11 @@
 # You can search for the song in your playlist and delete the duplicate entry inf you wish to do so
 
 # Input playlist url (must be a pulbic playlist)
+#TODO: Fix (improve) this later!
+#printf "\nType playlist url and press enter: "
+#read playlist
 
-printf "\nType playlist url and press enter: "
-read playlist
+playlist=$1
 	
 if [ "$playlist" = 'X' ]
 then

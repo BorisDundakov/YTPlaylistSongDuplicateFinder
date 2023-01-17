@@ -30,8 +30,6 @@ jobs:
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master
 
-
-
       - name: install youtube-dl
         run:  pip install --upgrade youtube-dl
 
@@ -50,11 +48,6 @@ jobs:
 
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master
-
-
-      - name: install youtube-dl
-        run:  pip install --upgrade youtube-dl
-
 
       - name: run bash-file from command line
         run: |
