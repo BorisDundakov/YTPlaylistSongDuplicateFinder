@@ -23,5 +23,5 @@ echo "All songs checked! If any dupliates exist, they will be stored inside 'dup
 sort songs.txt | uniq -d > duplicates.txt
 
 # remove the file as we no longer need it
-rm songs.txt
+#rm songs.txt
 
