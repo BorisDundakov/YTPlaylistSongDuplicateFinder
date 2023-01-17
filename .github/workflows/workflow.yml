@@ -12,7 +12,7 @@ on:
     # runs the cron job at 00:00 every day
     #- cron: '0 0 * * *'
 
-  #N.B!! each job needs to start by checking out current repo first??!!
+  #N.B!! each job needs to start by checking out current repo first!!
 
 jobs:
   
@@ -54,8 +54,8 @@ jobs:
           git diff-index --quiet HEAD || git commit -m "Updating duplicates.txt"
       
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
-          # if this works it is done manually, I haven't declared the variable GITHUB_TOKEN!
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+          #branch: master
+          branch: ${{ github.ref }}
