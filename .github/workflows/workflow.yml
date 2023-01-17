@@ -34,6 +34,14 @@ jobs:
     steps:
       - name: checkout current repo
         uses: actions/checkout@v3
+        with:
+          #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch..
+          #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
+          # Important!! I changed to 'token' from 'personal_token' and it worked!
+
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          branch: master
+
 
       - name: run bash-file from command line
         run: |
