@@ -50,11 +50,12 @@ jobs:
         run: | 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || git commit -m "Updating duplicates.txt"
+          git add .
+
+          git diff-index --quiet HEAD || (git commit -m "Updating duplicates.txt")
       
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+          branch: ${{ github.ref }}
