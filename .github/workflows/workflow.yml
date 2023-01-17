@@ -46,7 +46,7 @@ jobs:
           ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMFH3cIWKXgg9DPOaTyqMNAU
       
       - name: save Results
-        run: |
+        run: | 
           git config --global user.email "boris.stefan.de@gmail.com"
           git config --global user.name "BorisDundakov"
 
