@@ -38,7 +38,7 @@ jobs:
 
           #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch..
           #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master
 
 
@@ -66,5 +66,5 @@ jobs:
 
           #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch..
           #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master
