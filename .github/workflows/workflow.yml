@@ -52,6 +52,10 @@ jobs:
           branch: master
 
 
+      - name: install youtube-dl
+        run:  pip install --upgrade youtube-dl
+
+
       - name: run bash-file from command line
         run: |
           ./script.bash https://www.youtube.com/playlist?list=PLHr2orNvQFeVfkULTziDUO5MhcxW4nSiR
