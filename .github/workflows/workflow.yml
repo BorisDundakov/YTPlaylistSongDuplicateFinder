@@ -38,19 +38,13 @@ jobs:
 
           #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch..
           #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
+          # Important!! I changed to 'token' from 'personal_token' and it worked!
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master
 
-
-      - name: print current working directory
-        run: pwd
-      
-      - name: list working directory
-        run: ls
-
       - name: run bash-file from command line
         run: |
-          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMFH3cIWKXgg9DPOaTyqMNAU
+          ./script.bash https://www.youtube.com/playlist?list=PLHr2orNvQFeVfkULTziDUO5MhcxW4nSiR
       
       - name: save Results
       # changing from personal credentials to github credentials
@@ -66,5 +60,7 @@ jobs:
 
           #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch..
           #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
+          # Important!! I changed to 'token' from 'personal_token' and it worked!
+
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master

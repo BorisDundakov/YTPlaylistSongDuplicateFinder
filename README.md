@@ -3,4 +3,4 @@ Finds the songs that you might have accidentally stored twice in your YT playlis
 
 NOTE: Works with public playlists only
 
-hard coded playlist: https://www.youtube.com/playlist?list=PLGC6q23peGMFH3cIWKXgg9DPOaTyqMNAU
+hard coded playlist: https://www.youtube.com/playlist?list=PLHr2orNvQFeVfkULTziDUO5MhcxW4nSiR
