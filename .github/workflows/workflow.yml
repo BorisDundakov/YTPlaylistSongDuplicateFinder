@@ -36,8 +36,7 @@ jobs:
 
       - name: run bash-file from command line
         run: |
-          ./script.bash https://www.youtube.com/playlist?list=PLHr2orNvQFeVfkULTziDUO5MhcxW4nSiR
-      
+          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_
       - name: save Results
       # changing from personal credentials to github credentials
         run: | 
