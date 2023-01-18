@@ -13,6 +13,7 @@ on:
   schedule:
     #runs the cron job at 00:00 every day
     - cron: '0 0 * * *'
+    
 
   #N.B!! each job needs to start by checking out current repo first!!
 
