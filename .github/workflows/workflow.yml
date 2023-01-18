@@ -1,7 +1,4 @@
-# a workflow that will loop over the specified playlist
-# once every 24 hours. Results to be displayed as a push 
-# notification or something
-
+# a workflow that will loop over the specified playlist once every 24 hours. Results stored inside duplicates.txt
 
 name: check for duplicates
 
@@ -36,7 +33,9 @@ jobs:
 
       - name: run bash-file from command line
         run: |
+          # runs the bash file with a hardcoded playlist
           ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_
+          
       - name: save Results
       # changing from personal credentials to github credentials
         run: | 
@@ -48,10 +47,5 @@ jobs:
       - name: push changes
         uses: ad-m/github-push-action@master
         with:
-
-          #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch..
-          #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
-          # Important!! I changed to 'token' from 'personal_token' and it worked!
-
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master
