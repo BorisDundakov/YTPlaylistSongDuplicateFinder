@@ -31,14 +31,12 @@ jobs:
       - name: install youtube-dlp
         run:  sudo snap install yt-dlp
 
-
         # runs the bash file with a hardcoded playlist
-        # username and pass set as hidden variables for this repository (YT_USERNAME and YT_PASS)
       - name: run bash-file from command line
         run: |  
-        
-          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_ ${{ secrets.YT_USERNAME }} ${{ secrets.YT_PASS }}
-      - name: save Results
+          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_
+      
+      - name: save results
       # changing from personal credentials to GitHub credentials
         run: | 
           git config --local user.email "action@github.com"
