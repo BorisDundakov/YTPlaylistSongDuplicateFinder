@@ -20,7 +20,7 @@ fi
 printf "\nChecking for duplicate songs. This might take a while if the playlist is large...\n"
 
 # store all songs in songs.txt file
-youtube-dl --cookies "$cookies" -u "$username" -p "$password" --get-filename -o "%(playlist_title)s - %(title)s - %(id)s" "$playlist" -i  > songs.txt
+youtube-dl --cookies "$cookies" --username "$username" --password "$password" --get-filename -o "%(playlist_title)s - %(title)s - %(id)s" "$playlist" -i  > songs.txt
 
 echo "All songs checked! If any duplicates exist, they will be stored inside 'duplicates.txt'."
 
