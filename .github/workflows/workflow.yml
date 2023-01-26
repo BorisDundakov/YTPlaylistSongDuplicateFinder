@@ -1,6 +1,6 @@
 # a workflow that will loop over the specified playlist once every 24 hours. Results stored inside duplicates.txt
 
-name: check for song duplicates
+name: check for songduplicates
 
 on:
   # job runs on push event
@@ -34,10 +34,9 @@ jobs:
         # runs the bash file with a hardcoded playlist
         # username and pass set as hidden variables for this repository (YT_USERNAME and YT_PASS)
       - name: run bash-file from command line
-            # accessing Youtube account's cookies from a secret variable
         run: |  
-          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_ ${{ secrets.YT_COOKIES }}
-          
+        
+          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_
       - name: save Results
       # changing from personal credentials to GitHub credentials
         run: | 

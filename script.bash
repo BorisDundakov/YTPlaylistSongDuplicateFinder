@@ -8,7 +8,7 @@
 #read playlist
 
 playlist=$1
-cookies=$2
+cookies='cookies.txt'
 if [ "$playlist" = 'X' ]
 then
 		exit 0
