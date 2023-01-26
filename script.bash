@@ -1,5 +1,5 @@
 #!/bin/bash
-# Checks your Youtube playlist for duplicate songs. If all duplicate entries are stored in a duplicates.txt file
+# Checks your YouTube playlist for duplicate songs. If all duplicate entries are stored in a duplicates.txt file
 # You can search for the song in your playlist and delete the duplicate entry inf you wish to do so
 
 # Input playlist url (must be a public playlist)
