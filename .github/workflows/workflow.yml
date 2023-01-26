@@ -21,7 +21,7 @@ jobs:
       - name: checkout current repo
         uses: actions/checkout@v3
         with:
-          #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch..
+          #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch.
           #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
           # Important!! I changed to 'token' from 'personal_token' and it worked!
 
@@ -32,12 +32,13 @@ jobs:
         run:  pip install --upgrade youtube-dl
 
       - name: run bash-file from command line
-        run: |
-          # runs the bash file with a hardcoded playlist
-          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_
+        run: |  
+        # runs the bash file with a hardcoded playlist
+        # username and pass set as hidden variables for this repository (YT_USERNAME and YT_PASS)
+          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_ ${{ secrets.YT_USERNAME }} ${{ secrets.YT_PASS }} cookies.txt
           
       - name: save Results
-      # changing from personal credentials to github credentials
+      # changing from personal credentials to GitHub credentials
         run: | 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
