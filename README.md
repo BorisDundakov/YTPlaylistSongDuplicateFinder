@@ -10,4 +10,3 @@ hardcoded playlist: https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpf
 
 LIMITATIONS:
 - Works with public playlists only
-- Age restricted videos will be skipped (require YT login)
