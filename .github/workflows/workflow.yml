@@ -34,9 +34,8 @@ jobs:
         # runs the bash file with a hardcoded playlist
         # username and pass set as hidden variables for this repository (YT_USERNAME and YT_PASS)
       - name: run bash-file from command line
-        # accessing Youtube account's cookies from a secret variable
+            # accessing Youtube account's cookies from a secret variable
         run: |  
-        
           ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_ ${{ secrets.YT_COOKIES }}
           
       - name: save Results
