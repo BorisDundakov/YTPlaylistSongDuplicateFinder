@@ -1,6 +1,6 @@
 # a workflow that will loop over the specified playlist once every 24 hours. Results stored inside duplicates.txt
 
-name: check for duplicates
+name: check for song duplicates
 
 on:
   # job runs on push event
