@@ -36,7 +36,7 @@ jobs:
       - name: run bash-file from command line
         run: |  
         
-          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_ ${{ secrets.YT_USERNAME }} ${{ secrets.YT_PASS }} cookies.txt
+          ./script.bash https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpfz98S8gz6kiI_
           
       - name: save Results
       # changing from personal credentials to GitHub credentials
