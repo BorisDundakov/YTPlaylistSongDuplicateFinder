@@ -8,6 +8,7 @@
 #read playlist
 
 playlist=$1
+cookies=$2
 if [ "$playlist" = 'X' ]
 then
 		exit 0
@@ -16,7 +17,7 @@ fi
 printf "\nChecking for duplicate songs. This might take a while if the playlist is large...\n"
 
 # store all songs in songs.txt file
-youtube-dl --cookies /home/runner/work/YTPlaylistSongDuplicateFinder/YTPlaylistSongDuplicateFinder/cookies/cookies.txt --get-filename -o "%(playlist_title)s - %(title)s - %(id)s" "$playlist" -i  > songs.txt
+youtube-dl --cookies "$cookies" --get-filename -o "%(playlist_title)s - %(title)s - %(id)s" "$playlist" -i  > songs.txt
 
 echo "All songs checked! If any duplicates exist, they will be stored inside 'duplicates.txt'."
 
