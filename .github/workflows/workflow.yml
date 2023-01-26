@@ -28,8 +28,9 @@ jobs:
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: master
 
-      - name: install youtube-dl
-        run:  pip install --upgrade youtube-dlp
+      - name: install youtube-dlp
+        run:  sudo snap install yt-dlp
+
 
         # runs the bash file with a hardcoded playlist
         # username and pass set as hidden variables for this repository (YT_USERNAME and YT_PASS)
