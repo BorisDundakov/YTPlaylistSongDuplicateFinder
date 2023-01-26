@@ -8,9 +8,6 @@
 #read playlist
 
 playlist=$1
-username=$2
-pass=$3
-cookies=$4
 if [ "$playlist" = 'X' ]
 then
 		exit 0
