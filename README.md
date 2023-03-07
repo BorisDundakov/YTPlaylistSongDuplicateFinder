@@ -10,6 +10,3 @@ hardcoded playlist: https://www.youtube.com/playlist?list=PLGC6q23peGMGHyrd3Vjpf
 
 LIMITATIONS:
 - Works with public playlists only
-
-EDIT:
-- Not working as of Feb 17, update expected to fix it soon
