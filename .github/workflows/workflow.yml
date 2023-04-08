@@ -11,15 +11,13 @@ on:
     # runs the cron job at 10:22 every day UTC Time (12:22 EET)
      - cron: '22 10 * * *'
 
-  #N.B!! each job needs to start by checking out current repo first!!
-
 jobs:
   run-bash-file:
     runs-on: ubuntu-latest
 
     steps:
-#       - name: set-up configurations
-#         run: git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+      - name: set-up configurations
+        run: git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
       - name: checkout current repo
         uses: actions/checkout@v3
