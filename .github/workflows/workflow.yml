@@ -3,6 +3,7 @@
 name: check for song duplicates
 
 on:
+  workflow_dispatch:
   # job runs on push event
   push:
   
