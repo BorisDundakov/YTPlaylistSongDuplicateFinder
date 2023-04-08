@@ -15,6 +15,9 @@ on:
 jobs:
   run-bash-file:
     runs-on: ubuntu-22.04
+    
+    permissions:
+      contents: write  # To push a branch
 
     steps:
 #       - name: set-up configurations
