@@ -14,7 +14,7 @@ on:
 
 jobs:
   run-bash-file:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: set-up configurations
@@ -22,14 +22,14 @@ jobs:
 
       - name: checkout current repo
         uses: actions/checkout@v3
-        with:
+#        with:
         
 #           #${{ secrets.GITHUB_TOKEN }} --> GITHUB_TOKEN works only on default branch.
 #           #therefore I have created a secret for this repository called 'PERSONAL_TOKEN'
 #           # Important!! I changed to 'token' from 'personal_token' and it worked!
 
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: master
+#          token: ${{ secrets.PERSONAL_TOKEN }}
+#          branch: master
           
       - name: install youtube-dlp
         run:  sudo snap install yt-dlp
@@ -45,10 +45,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || (git commit -m "Updating duplicates.txt")
+          git diff-index --quiet HEAD || (git commit -a -m "Updating duplicates.txt" --allow-empty)
       
       - name: push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: master
