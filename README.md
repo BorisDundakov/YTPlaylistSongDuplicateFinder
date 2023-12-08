@@ -12,4 +12,4 @@ LIMITATIONS:
 - Works with public playlists only
 
 INTENDED USE:
-- run the shell script by providing your playlist as an input and manually delete the duplicated songs from your playlist afterwards
+- Run the shell script by providing your playlist as an input and manually delete the duplicated songs from your playlist afterwards
